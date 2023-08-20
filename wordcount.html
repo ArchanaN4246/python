@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style1.css">
+   <!-- <script src="validate.js" defer></script>-->
+    <title>Word counter</title>
+</head>
+<body>
+    <div id ="wrap">
+    <div class="container">
+        <h1>Word counter</h1>
+        <h3>Type a sentence</h3>
+        <div class="input-group">
+            <textarea name="para" id="para" cols="5" rows="10"></textarea>
+        </div>
+        <div>
+            <button type="submit" onclick="counter()">calculate words</button>
+        </div>
+        <div>
+            <h2 id="result"></h2>
+        </div>    
+        <script>
+        function counter(){
+            //const para1=0
+            const para1=document.getElementById("para").value
+            if(para1===""){
+                result.innerHTML="The total number of words in the para is 0"
+            }
+            else{
+            const word=para1.split(" ")
+            const result=document.getElementById("result")
+            result.innerHTML="The total number of words in the para is "+word.length 
+        }
+    }
+    </script>
+    </div>          
+</div>    
+</body>
+</html>
